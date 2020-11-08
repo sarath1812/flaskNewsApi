@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body style="background-color: beige;">
+    <h1 style="color: green;position: center;" > TODAYS FAST TRACK NEWS</h1>
+
+    
+
+    <form action="/results/" method='post'>
+    
+        <input type="text" placeholder="search a keyword" name='keyword'>
+        <input type="text" placeholder="category" name='Categorykeyword'>
+    
+        <button type="submit">Get news</button>
+         
+    </form>
+    {% for post in news%}
+    <h3 style="color :rgb(39, 30, 38)">{{post['title']}}</h3>
+    <i>{{post['publishedAt']}}</i>
+    <p>{{post['description']}}</p>
+    
+    {% endfor %}
+</body>
+</html> 
